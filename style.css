@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+font-style: italic;
+line-height: 4rem;
+}
+.navigation-container{
+    position: fixed;
+    background-color:darkslategray;
+    color: white;
+
+}

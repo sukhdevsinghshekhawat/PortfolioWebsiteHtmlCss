@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navigation-container {
+            background-color: darkolivegreen;
+            color: white;
+            font-size: 1.3rem;
+            height: 8vh;
+            padding: 2vh;
+        }
+
+        .nav-top {
+            text-align: center;
+        }
+
+        .nav-top ul {
+            list-style: none;
+        }
+
+        .nav-top ul li {
+            display: inline;
+        }
+
+        .nav-top ul li a {
+            color: rgb(16, 3, 3);
+            text-decoration: solid;
+            transform: color 0.3;
+            margin-right: 2rem;
+
+        }
+
+        .nav-top ul li a:hover {
+            color: blue;
+        }
+
+        #home {
+            margin: 3rem 2rem;
+            background-color: antiquewhite;
+            box-shadow: 0 5px 10px rgb(16, 3, 3);
+
+        }
+
+        .home-page {
+            max-width: 1000;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding: 2vh;
+
+        }
+
+        .home-page img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        .aboutself p {
+            font-size: 3vh;
+            font-weight: normal;
+
+        }
+
+        .project {
+            margin: 4rem 2rem;
+            background-color: antiquewhite;
+            box-shadow: 0 5px 10px rgb(16, 3, 3);
+        }
+
+        .project h2 {
+            text-align: center;
+            padding: 2rem;
+            text-decoration: underline;
+            font-size: 4rem;
+        }
+
+        .project .my-project {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+
+        .project .my-project .Calculatorproject {
+
+            background-color: whitesmoke;
+            height: 205px;
+            width: 195px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 10px rgb(16, 3, 3);
+        }
+
+        .project .my-project .Calculatorproject:hover {
+
+            transform: translateY(-15px);
+
+        }
+        /* .project .my-project .Calculatorproject img{
+            height: 375;
+            width: 300;
+
+        } */
+       
+        .project .my-project .TicTocgame {
+
+            background-color: whitesmoke;
+            height: 200px;
+            width: 175px;
+            box-shadow: 0 5px 10px rgb(16, 3, 3);
+            transition: transform 0.3s ease;
+        }
+
+        .project .my-project .TicTocgame:hover {
+            transform: translateY(-15px);
+        }
+
+        .project .my-project .Digitalclock {
+
+            background-color: whitesmoke;
+            height: 200px;
+            width: 175px;
+            box-shadow: 0 5px 10px rgb(16, 3, 3);
+            transition: transform 0.3s ease;
+        }
+
+        .project .my-project .Digitalclock:hover {
+
+            transform: translateY(-15px);
+        }
+
+        .skills {
+            background-color: antiquewhite;
+            box-shadow: 0 5px 10px rgb(16, 3, 3);
+            text-align: center;
+            align-items: center;
+            justify-content: space-evenly;
+            display: flex;
+        }
+
+        .skills .softskills{
+          
+           padding: 3rem;
+            
+        }
+        .skills .softskills .Communication{
+            background-color: darkgray;
+            height: 50px;
+            width: 300px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 10px rgb(16, 3, 3);
+            transition: transform 0.4s ease;
+        }
+        .skills .softskills .Communication:hover{
+            transform: scale(1.02);
+        }
+        .skills .softskills .Team{
+            background-color: darkgray;
+            height: 50px;
+            width: 300px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 10px rgb(16, 3, 3);
+            transition: transform 0.4s ease;
+        }
+        .skills .softskills .Team:hover{
+            transform:scale(1.02);
+        }
+        .skills .softskills .Problem{
+            background-color: darkgray;
+            height: 50px;
+            width: 300px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 10px rgb(16, 3, 3);
+            transition: transform 0.4s ease;
+        }
+        .skills .softskills .Problem:hover{
+            transform:scale(1.02);
+        }
+        .skills .softskills .TeamLeader{
+            background-color: darkgray;
+            height: 50px;
+            width: 300px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 10px rgb(16, 3, 3);
+            transition: transform 0.4s ease;
+        }
+        .skills .softskills .TeamLeader:hover{
+            transform:scale(1.02);
+        }
+        /* .skills span{
+             font-weight: bold;
+              
+        } */
+       
+        
+        .skills .TechnicalSkills .java{
+            height: 50px;
+            width: 300px;
+            margin-bottom: 1rem;
+            background-color:darkgray;
+            box-shadow: 0 2px 5px rgb(16, 3, 3);
+            transition: transform 0.3s ease;
+        }
+        .skills .TechnicalSkills .java:hover{
+            transform: scale(1.02);
+        }
+        .skills .TechnicalSkills .Csharp{
+            height: 50px;
+            width: 300px;
+            margin-bottom: 1rem;
+            background-color: darkgray;
+            box-shadow: 0 2px 5px rgb(16, 3, 3);
+            transition: transform 0.3s ease;
+        }
+        .skills .TechnicalSkills .Csharp:hover{
+            transform: scale(1.02);
+        }
+        .skills .TechnicalSkills .Python{
+            height: 50px;
+            width: 300px;
+            margin-bottom: 1rem;
+            background-color: darkgray;
+            box-shadow: 0 2px 5px rgb(16, 3, 3);
+            transition: transform 0.3s ease;
+        }
+        .skills .TechnicalSkills .Python:hover{
+            transform: scale(1.02);
+        }
+        .skills .TechnicalSkills .C{
+            height: 50px;
+            width: 300px;
+            margin-bottom: 1rem;
+            background-color:darkgray;
+            box-shadow: 0 2px 5px rgb(16, 3, 3);
+            transition: transform 0.3s ease;
+        }
+        .skills .TechnicalSkills .C:hover{
+            transform: scale(1.02);
+        }
+        .skills .languageskils .hindi{
+            height: 50px;
+            width: 300px;
+            margin-bottom: 1rem;
+            background-color:darkgray;
+            box-shadow: 0 2px 5px rgb(16, 3, 3);
+            transition: transform 0.3s ease;
+        }
+        .skills .languageskils .hindi:hover{
+            transform: scale(1.02);
+        }
+        .skills .languageskils .english{
+            height: 50px;
+            width: 300px;
+            margin-bottom: 1rem;
+            background-color:darkgray;
+            box-shadow: 0 2px 5px rgb(16, 3, 3);
+            transition: transform 0.3s ease;
+        }
+        .skills .languageskils .english:hover{
+            transform: scale(1.02);
+        }
+        .skills .languageskils .haryanvi{
+            height: 50px;
+            width: 300px;
+            margin-bottom: 1rem;
+            background-color:darkgray;
+            box-shadow: 0 2px 5px rgb(16, 3, 3);
+            transition: transform 0.3s ease;
+        }
+        .skills .languageskils .haryanvi:hover{
+            transform: scale(1.02);
+        }
+        .skilheding{
+            margin-bottom: 2rem;
+            text-decoration: underline;
+        }
+        #eduction-container{
+            background-color: antiquewhite;
+            margin-top: 7rem;
+            box-shadow: 0 5px 10px rgb(16, 3, 3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+        #eduction-container h2{
+            margin-top: 1.2rem;
+            text-decoration: underline;
+        }
+        #eduction-container ul li{
+              list-style: none;
+              margin-top: 2rem;
+        }
+        .footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            justify-content: center;
+            margin-top: 10rem;
+        }
+        .footer .footer-container {
+            padding-top: 6vh;
+        }
+        .footer .footer-container ul li {
+           margin-bottom: 1.2rem;
+        
+        }
+    </style>
+ </head>
+
+ <body>
+
+    <!-- navigation page -->
+
+    <nav class="navigation-container">
+        <nav class="nav-top">
+            <ul class="nav-link">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#skills">Skills</a></li>
+                <li class="nav-item"><a href="#eductions">Eduction</a></li>
+                <li class="nav-item"><a href="#project">Project</a></li>
+            </ul>
+        </nav>
+    </nav>
+    <section id="home">
+        <div class="home-page">
+            <img src="kt5.jpg" alt="sukhdevsinghimage">
+            <div class="aboutself">
+                <h2>!Hii I am sukhdev singh shekhawat </h2>
+                <p>I am currently pursuing my MCA from Maharishi Arvind College, Jaipur.</p>
+                <p>I am a passionate web developer, currently focusing on full stack development.</p>
+                <p>I have completed several web development projects that have helped me strengthen my skills.</p>
+                <p>I am a quick learner with a strong desire to continuously explore and adapt to new technologies.</p>
+            </div>
+        </div>
+    </section>
+    <section class="project" id="project">
+        <h2>Project</h2>
+        <div class="my-project">
+            <div class="Calculatorproject"><span>Calculator
+              <img src="calculat.jpeg" alt="Calulator Project image">
+            </span></div>
+            <div class="TicTocgame"><span>Game
+                <img src="ticto.png" alt="tic tac toe game project">
+            </span></div>
+            <div class="Digitalclock"><span>Clock
+                <img src="digitalclock.jpeg" alt="Digital clock project">
+            </span></div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <div class="softskills">
+             <h2 class="skilheding">Softskills</h2>
+            <div class="Communication"><span> Communication</span></div>
+            <div class="Team"><span> Team Management</span></div>
+            <div class="Problem"><span>Problem soloving </span></div>
+            <div class="TeamLeader"><span>Team Leader </span></div>
+        </div>
+        <div class="TechnicalSkills">
+            <h2 class="skilheding">TechnicalSkills</h2>
+            <div class="java"><span> Java</span></div>
+            <div class="Csharp"><span>C# </span></div>
+            <div class="C"><span>C++</span></div>
+            <div class="Python"><span>Python</span></div>
+        </div>
+        <div class="languageskils">
+            <h2 class="skilheding">languageskils</h2>
+            <div class="hindi"><span>Hindi </span></div>
+            <div class="english"><span>English</span></div>
+            <div class="haryanvi"><span> Haryanvi</span></div>
+            <div class="haryanvi"><span> RAjasthan</span></div>
+        </div>
+    </section>
+    <section id="eduction-container" id="eductions">
+       
+        <div class="eduction10th">
+            <h2>10Th</h2>
+            <ul class="tenthdeatil">
+               <li>School Name--</li>
+               <li>Bord Name--</li>
+               <li>CGPA--</li>
+               <li>Year--</li>
+            </ul>
+        </div>
+        <div class="eduction12th">
+            <h2>12Th</h2>
+            <ul class="12thdeatil">
+               <li>School Name--</li>
+               <li>Bord Name--</li>
+               <li>CGPA--</li>
+               <li>Year--</li>
+            </ul>
+        </div>
+        <div class="eduction12th">
+            <h2>College</h2>
+            <ul class="12thdeatil">
+               <li>College Name--</li>
+               <li>University Name--</li>
+               <li>CGPA--</li>
+               <li>Year--</li>
+            </ul>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-container">
+            <ul>
+                <li>E-mail-Sukhdevsingh00133@gmail.com</li>
+                <li>Mob-9145948382</li>
+                <li>Location-Jhotwara,Ravangate,Jaipur</li>
+                <li>Developed By-CodeWithMaharishiCollege</li>
+                <li>&copyAll Right Reserved 2025</li>
+             </ul>
+        </div>
+    </section>
+ </body>
+
+</html>
